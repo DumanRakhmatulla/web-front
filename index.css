@@ -1,0 +1,17 @@
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.div1, .div3 {
+    background-color: blue;
+    height: 100px;
+    width: 200px;
+}
+
+.div2, .div4 {
+    background-color: red;
+    height: 100px;
+    width: 200px;
+}
