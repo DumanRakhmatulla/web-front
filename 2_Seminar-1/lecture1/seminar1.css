@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  background-color: green;
+}
+
+.wrap-1 div {
+  height: 30px;
+  background-color: red;
+  flex: 1;
+}
+
+.wrap-1 div:nth-child(odd) {
+  background-color: blue;
+  flex: 1;
+}
+
+.wrap-2 div {
+  height: 30px;
+  flex: 9;
+}
+
+.wrap-2 div:nth-child(even) {
+  background-color: blue;
+  flex: 1;
+}
+
+.w-1 {
+  height: 30px;
+  background-color: red;
+  flex: 1;
+}
+
+.w-2 {
+  height: 30px;
+  flex: 8;
+}
+
+.w-3 {
+  height: 30px;
+  background-color: blue;
+  flex: 1;
+}
+
+.wrap-4 div {
+  height: 30px;
+  background-color: red;
+  flex: 9;
+}
+
+.wrap-4 div:nth-child(even) {
+  background-color: blue;
+  flex: 1;
+}
+
+.wrap-5 div {
+  height: 30px;
+  flex: 17;
+}
+
+.wrap-5 div:nth-child(even) {
+  background-color: red;
+  margin: 5px;
+  height: 20px;
+  flex: 1;
+}
+
+.wrap-6 div {
+  height: 30px;
+  background-color: red;
+  flex: 10;
+}
+
+.wrap-6 div:nth-child(even) {
+  background-color: blue;
+  flex: 1;
+}
+
+.wrap-7 .maxw {
+  height: 30px;
+  background-color: red;
+  flex: 1;
+}
+
+.wrap-7 .maxw:nth-child(even) {
+  background-color: blue;
+  flex: 9;
+}
+
+.maxw {
+  display: flex;
+  flex-direction: column;
+}
+
+.maxw div {
+  height: 10px;
+  background-color: green;
+  flex: 1;
+}
+
+.maxw div:nth-child(odd) {
+  background-color: blue;
+  flex: 1;
+}
+
+.wrap-8 div {
+  height: 30px;
+  background-color: orange;
+  flex: 1;
+}
+
+.wrap-8 div:nth-child(even) {
+  background-color: green;
+  flex: 5;
+}
+
+.wrap-9 div {
+  height: 30px;
+  background-color: orange;
+  flex: 12;
+}
+
+.wrap-9 div:nth-child(even) {
+  background-color: green;
+  flex: 1;
+}
+
+p {
+  margin: 16px 0 0 0;
+  font-weight: 1000;
+}
