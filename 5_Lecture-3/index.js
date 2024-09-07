@@ -14,7 +14,7 @@
 let a = 15;
 console.log(a, typeof a);
 console.log(typeof String(a));
-console.log("1" + 5);
+console.log("1" - 5);
 
 let value = true;
 value = String(value);
@@ -83,3 +83,8 @@ console.log(9 > 1 + 2);
 console.log("10" <= "11");
 console.log("Duman" > "Ospan"); //false
 console.log("Ar" > "Ak"); // true
+console.log("1" - 5);
+
+let bool1 = true;
+let bool2 = false;
+console.log(bool1);
