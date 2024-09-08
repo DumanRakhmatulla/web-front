@@ -12,43 +12,43 @@
 
 //
 let a = 15;
-console.log(a, typeof a);
-console.log(typeof String(a));
-console.log("1" - 5);
+// console.log(a, typeof a);
+// console.log(typeof String(a));
+// console.log("1" - 5);
 
 let value = true;
 value = String(value);
-console.log(value, typeof value);
-console.log(typeof Number(value), Number(value));
+// console.log(value, typeof value);
+// console.log(typeof Number(value), Number(value));
 
 ////  Type conversions
 
 let string = "Hello world";
-console.log(Number(string), typeof Number(string));
-console.log("5" / "2");
-console.log("5" - "2");
-console.log(typeof "5" % "2"); //NaN
-console.log(typeof Number("5" + 1));
-console.log(Number("123x"));
-console.log(Number("true")); //NaN
-console.log(Number(true)); // 1
-console.log(Number(false)); // 0
-console.log(Number(null)); // 0
-console.log(Number(undefined)); //NaN
+// console.log(Number(string), typeof Number(string));
+// console.log("5" / "2");
+// console.log("5" - "2");
+// console.log(typeof "5" % "2"); //NaN
+// console.log(typeof Number("5" + 1));
+// console.log(Number("123x"));
+// console.log(Number("true")); //NaN
+// console.log(Number(true)); // 1
+// console.log(Number(false)); // 0
+// console.log(Number(null)); // 0
+// console.log(Number(undefined)); //NaN
 
-console.log(Boolean(1)); //true
-console.log(Boolean(12312)); //true
-console.log(Boolean(0)); //false
-console.log(Boolean("Hello world")); // true
-console.log(Boolean("")); //false
-console.log();
+// console.log(Boolean(1)); //true
+// console.log(Boolean(12312)); //true
+// console.log(Boolean(0)); //false
+// console.log(Boolean("Hello world")); // true
+// console.log(Boolean("")); //false
+// console.log();
 
 ////  Operators: Math
 
-console.log(5 / 2);
-console.log(5 % 2);
-console.log(5 ** 2);
-console.log(9 ** (1 / 2)); // 3
+// console.log(5 / 2);
+// console.log(5 % 2);
+// console.log(5 ** 2);
+// console.log(9 ** (1 / 2)); // 3
 
 let inc = 10,
   dec = 10;
@@ -57,34 +57,69 @@ let inc = 10,
 // dec--
 
 // postfix
-console.log(inc++); //10
-console.log(inc); //11
-console.log(dec--); //10
-console.log(dec); //9
+// console.log(inc++); //10
+// console.log(inc); //11
+// console.log(dec--); //10
+// console.log(dec); //9
 // prefix
 //inc = 11 dec = 9
-console.log(++inc); //12
-console.log(--dec); //8
+// console.log(++inc); //12
+// console.log(--dec); //8
 
 // Comparisons
-console.log(8 > 9);
-console.log(8 < 9);
-console.log(9 == 9);
-console.log(9 === 9); //true
-console.log(9 === "9"); // false
-console.log("ada" == "aad");
-console.log(undefined == null); //true
-console.log(undefined === null); //false
-console.log(null == 0); //false
+// console.log(8 > 9);
+// console.log(8 < 9);
+// console.log(9 == 9);
+// console.log(9 === 9); //true
+// console.log(9 === "9"); // false
+// console.log("ada" == "aad");
+// console.log(undefined == null); //true
+// console.log(undefined === null); //false
+// console.log(null == 0); //false
 
-console.log(9 != 9); //false
-console.log(9 !== 9); // false
-console.log(9 > 1 + 2);
-console.log("10" <= "11");
-console.log("Duman" > "Ospan"); //false
-console.log("Ar" > "Ak"); // true
-console.log("1" - 5);
+// console.log(9 != 9); //false
+// console.log(9 !== 9); // false
+// console.log(9 > 1 + 2);
+// console.log("10" <= "11");
+// console.log("Duman" > "Ospan"); //false
+// console.log("Ar" > "Ak"); // true
+// console.log("1" - 5);
 
 let bool1 = true;
 let bool2 = false;
-console.log(bool1);
+// console.log(bool1);
+
+// Condition
+const humburger = 10;
+const fries = 5;
+const cola = 6;
+
+// if (humburger >= 11) {
+//   console.log("Lets eat");
+// } else {
+//   console.log("Not today");
+// }
+
+let years = 50;
+
+// switch (years) {
+//   case 50:
+//     console.log("Happy 50!");
+//     break;
+//   case 49:
+//     console.log("Not happy 50!");
+//     break;
+//   case 48:
+//     console.log("Not happy 50!");
+//     break;
+//   default:
+//     console.log("Happy birthday!");
+// }
+let result = "";
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j <= i; j++) {
+    result += "*";
+  }
+  console.log(result);
+  result = "";
+}
