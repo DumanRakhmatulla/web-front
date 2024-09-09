@@ -79,6 +79,20 @@ function transfer(fromAccountNumber, toAccountNumber, amount) {
   }
 }
 
+function withdrow(accountNumber, amount) {
+  let accN = null,
+    accB = null;
+  for (let i = 0; i < accounts.length; i++) {
+    if (accounts[i].accountNumber == accountNumber) {
+      accN = accountNumber;
+      accB = accounts[i].balance;
+    }
+  }
+  if (accN == null) {
+    aler;
+  }
+}
+
 createAccount(15, "Raymbek", 500);
 createAccount(16, "Duman", 500);
 transfer(16, 15, 200);
