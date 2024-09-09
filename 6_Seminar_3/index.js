@@ -88,14 +88,23 @@ function withdrow(accountNumber, amount) {
       accB = accounts[i].balance;
     }
   }
-  if (accN == null) {
-    aler;
+  if (accN === null) {
+    alert("нету этого аккаунт");
+  } else if (accB < amount || accB === null) {
+    alert("Не достатчно денег");
+  } else {
+    for (let i = 0; i < accounts.length; i++) {
+      if (accounts[i].accountNumber == accountNumber) {
+        accounts[i].balance -= amount;
+      }
+    }
   }
 }
 
 createAccount(15, "Raymbek", 500);
 createAccount(16, "Duman", 500);
-transfer(16, 15, 200);
+withdrow(15, 200);
+// transfer(16, 15, 200);
 // deposit(15, 500);
 // deposit(16, 1000);
 console.log(accounts);
