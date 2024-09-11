@@ -48,5 +48,43 @@
 // arr = s.split(" ");
 // console.log(arr);
 
-let array1 = [1, 12, 26, 25, 7, 6];
-console.log(array1.sort); // 1 12 25 26 6 7
+// let array1 = [1, 12, 26, 25, 7, 6];
+// console.log(array1.sort()); // 1 12 25 26 6 7
+// array1.sort((a, b) => a - b);
+// console.log(array1); // 1 6 7 12 25 26
+
+// const num = array1.find((item) => item === 13);
+// console.log(num);
+
+// ---------
+// transform
+// ----------
+
+const data = ["a", "b", "caaaa", "da5rea"];
+
+// for(let i =0; i < )
+// for(let key in data)
+// for(let key of data)
+
+// data.forEach(function (item) {
+//   console.log(item);
+// });
+
+const data1 = data.map((item) => {
+  if (item.includes("a")) {
+    return "a";
+  }
+  return item;
+});
+
+console.log(data1);
+
+const data2 = data1.filter((item) => item === "a");
+console.log(data2);
+
+const data3 = data.some((item) => (item === "b" ? item : ""));
+console.log(data3);
+
+// const data4 = data.every((item)=>
+//     return item = '';
+// )
