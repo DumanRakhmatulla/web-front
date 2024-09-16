@@ -45,13 +45,40 @@ const elementByClass = document.getElementsByClassName("first");
 
 // query selectr
 const elementOneByIdSelect = document.querySelectorAll("#first");
-console.log(elementOneByIdSelect);
+// console.log(elementOneByIdSelect);
 
 const elementOneByClassSelect = document.querySelectorAll(".first");
-console.log(elementOneByClassSelect);
+// console.log(elementOneByClassSelect);
 
 const elemByMulti = document.querySelectorAll("[random]");
-console.log(elemByMulti);
+// console.log(elemByMulti);
 
-const elemByMulti2 = document.querySelectorAll(".first [random]");
-console.log(elemByMulti2);
+// const elemByMulti2 = document.querySelectorAll(". first [random]");
+// console.log(elemByMulti2);
+const pElement = document.querySelectorAll(".about p")[0];
+console.log(pElement);
+// pElement.outerHTML = `
+//     <p>About DOM!!!</p>
+// `;
+
+// pElement.innerHTML = `<span class="yellow">I linke this!</span>`;
+
+const newElement = document.createElement("div");
+const className = "nFactorial web Batch 27";
+const newElementP = document.createElement("p");
+newElementP.textContent = `Lets goo ${className}`;
+newElement.append(newElementP);
+console.log(document);
+elemOne.prepend(newElement);
+
+const user = prompt("Who are you");
+if (user === "nFactorial fellow") {
+  newElement.style.backgroundColor = "red";
+  newElement.style.color = "white";
+}
+
+newElement.style.cssText = `
+    margin: 10px;
+    color: green;
+    background-color: red;
+`;
