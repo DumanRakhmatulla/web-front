@@ -4,6 +4,10 @@
 // иначе перенаправьте на "https://wikipedia.org/"
 // location.href = navigator.userAgent.includes("Chrome") ? "https://google.com/" : "https://wikipedia.org/";
 
+// navigator.userAgent.includes("Chrome") || navigator.userAgent.includes("Safari")
+//   ? (location.href = "https://google.com/")
+//   : (location.href = "https://wikipedia.org/");
+
 // Task 2
 // создайте 4 новых <li> </li> вложенных в существующий ul
 // присвойте каждому li любой текст, тексты должны отличаться
@@ -45,7 +49,41 @@
 // Для того чтобы слушать изменения экрана в реальном времени
 // можно использовать window.addEventListener("resize",function)
 // window.addEventListener("resize", function () {
-//   if(this.window.innerWidth<=740){
+//   if(this.window.inne rWidth<=740){
 //     console.log('hello');
 //   }
 // });
+
+// Task 2
+// создайте 4 новых <li> </li> вложенных в существующий ul
+// присвойте каждому li любой текст, тексты должны отличаться
+// присвойте каждому li новый class = list-element
+
+const myUL = document.getElementById("myUL");
+
+const arr = ["Duman", "Zhenis", "Gala"];
+
+arr.forEach((val) => {
+  const newLi = document.createElement("li");
+  newLi.className = "list-element";
+  newLi.textContent = val;
+  myUL.append(newLi);
+});
+
+const liElements = document.querySelectorAll("li");
+console.log(liElements);
+
+liElements.forEach((liElement) => {
+  const newSpan = document.createElement("span");
+  newSpan.className = "close";
+  const txt = document.createTextNode("close");
+  newSpan.append(txt);
+  liElement.append(newSpan);
+});
+
+function handleClick() {
+  const newTodoText = "Woke up at 7am";
+  myUL.append(newTodoText);
+}
+const addBtn = document.getElementsByClassName("addBtn")[0];
+addBtn.addEventListener("click", handleClick);
