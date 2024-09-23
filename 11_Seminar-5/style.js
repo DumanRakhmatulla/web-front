@@ -1,7 +1,7 @@
-let todo = [
-  { id: Date.now(), text: "asd" },
-  { id: Date.now(), text: "asd" },
-  { id: Date.now(), text: "asd" },
+let todos = [
+  { id: Date.now(), text: "text 1" },
+  { id: Date.now(), text: "text 2" },
+  { id: Date.now(), text: "text 3" },
 ];
 
 // Задание 1.
@@ -18,6 +18,15 @@ let todo = [
 
 function updateTodoList() {
   const todoList = document.getElementById("todoList");
+
+  todos.forEach((todo) => {
+    const listItem = document.createElement("li");
+    listItem.className =
+      "list-group-item d-flex justify-content-between align-items-center";
+
+    const todoText = document.createElement("span");
+    todoText.textContent = todo.text;
+  });
 }
 updateTodoList();
 
