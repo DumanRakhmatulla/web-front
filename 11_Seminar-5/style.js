@@ -16,65 +16,68 @@ let todos = [
 // Добавить в LI > span, 2 кнопики
 // Добавить в UL > LI
 
-const todoList = document.getElementById("todoList");
-const addTodoButton = document.getElementById("addTodo");
-const newTodoInput = document.getElementById("newTodo");
+// "btn", "btn-warning", "btn-sm", "ml-2"
+// "btn", "btn-warning", "btn-sm", "ml-2"
 
-function updateTodoList() {
-  todoList.innerHTML = "";
+// const todoList = document.getElementById("todoList");
+// const addTodoButton = document.getElementById("addTodo");
+// const newTodoInput = document.getElementById("newTodo");
 
-  tasks.forEach((text, index) => {
-    const li = document.createElement("li");
-    li.classList.add(
-      "list-group-item",
-      "d-flex",
-      "justify-content-between",
-      "align-items-center"
-    );
+// function updateTodoList() {
+//   todoList.innerHTML = "";
 
-    const spanTask = document.createElement("span");
-    spanTask.textContent = text;
+//   tasks.forEach((text, index) => {
+//     const li = document.createElement("li");
+//     li.classList.add(
+//       "list-group-item",
+//       "d-flex",
+//       "justify-content-between",
+//       "align-items-center"
+//     );
 
-    const editButton = document.createElement("button");
-    editButton.textContent = "Edit";
-    editButton.classList.add("btn", "btn-warning", "btn-sm", "ml-2");
-    editButton.addEventListener("click", () => editTask(index));
+//     const spanTask = document.createElement("span");
+//     spanTask.textContent = text;
 
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "Delete";
-    deleteButton.classList.add("btn", "btn-danger", "btn-sm", "ml-2");
-    deleteButton.addEventListener("click", () => deleteTask(index));
+//     const editButton = document.createElement("button");
+//     editButton.textContent = "Edit";
+//     editButton.classList.add("btn", "btn-warning", "btn-sm", "ml-2");
+//     editButton.addEventListener("click", () => editTask(index));
 
-    li.appendChild(spanTask);
-    li.appendChild(editButton);
-    li.appendChild(deleteButton);
+//     const deleteButton = document.createElement("button");
+//     deleteButton.textContent = "Delete";
+//     deleteButton.classList.add("btn", "btn-danger", "btn-sm", "ml-2");
+//     deleteButton.addEventListener("click", () => deleteTask(index));
 
-    todoList.appendChild(li);
-  });
-}
+//     li.appendChild(spanTask);
+//     li.appendChild(editButton);
+//     li.appendChild(deleteButton);
 
-let tasks = ["An item", "A second item", "A thrid item"];
+//     todoList.appendChild(li);
+//   });
+// }
 
-addTodoButton.addEventListener("click", () => {
-  const newTask = newTodoInput.value.trim();
-  if (newTask) {
-    tasks.push(newTask);
-    newTodoInput.value = "";
-    updateTodoList();
-  }
-});
+// let tasks = ["An item", "A second item", "A thrid item"];
 
-function editTask(index) {
-  const newTask = prompt("Edit task:", tasks[index]);
-  if (newTask !== null && newTask.trim() !== "") {
-    tasks[index] = newTask;
-    updateTodoList();
-  }
-}
+// addTodoButton.addEventListener("click", () => {
+//   const newTask = newTodoInput.value.trim();
+//   if (newTask) {
+//     tasks.push(newTask);
+//     newTodoInput.value = "";
+//     updateTodoList();
+//   }
+// });
 
-function deleteTask(index) {
-  tasks.splice(index, 1);
-  updateTodoList();
-}
+// function editTask(index) {
+//   const newTask = prompt("Edit task:", tasks[index]);
+//   if (newTask !== null && newTask.trim() !== "") {
+//     tasks[index] = newTask;
+//     updateTodoList();
+//   }
+// }
 
-updateTodoList();
+// function deleteTask(index) {
+//   tasks.splice(index, 1);
+//   updateTodoList();
+// }
+
+// updateTodoList();
