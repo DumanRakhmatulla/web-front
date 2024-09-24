@@ -19,6 +19,44 @@ let todos = [
 // "btn", "btn-warning", "btn-sm", "ml-2"
 // "btn", "btn-warning", "btn-sm", "ml-2"
 
+const todoList = document.getElementById("todoList");
+const newTodoInput = document.getElementById("newTodo");
+const addTodoButton = document.getElementById("addTodo");
+
+function updateTodoList() {
+  console.log("Hello");
+  todoList.innerHTML = "";
+  tasks.forEach((text) => {
+    const li = document.createElement("li");
+    li.classList.add(
+      "list-group-item",
+      "d-flex",
+      "justify-content-between",
+      "align-items-center"
+    );
+
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    li.appendChild(span);
+
+    todoList.appendChild(li);
+  });
+}
+
+let tasks = ["asdf", "asdfas", "asfdas"];
+
+addTodoButton.addEventListener("click", () => {
+  const newText = newTodoInput.value.trim();
+  if (newText) {
+    tasks.push(newText);
+    newTodoInput.value = "";
+  }
+  updateTodoList();
+});
+
+updateTodoList();
+
 // const todoList = document.getElementById("todoList");
 // const addTodoButton = document.getElementById("addTodo");
 // const newTodoInput = document.getElementById("newTodo");
