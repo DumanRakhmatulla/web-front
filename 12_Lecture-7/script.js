@@ -1,6 +1,6 @@
-const sayHello = () => {
-  console.log("Hello");
-};
+// const sayHello = () => {
+//   console.log("Hello");
+// };
 
 // setTimeout(sayHello, 5000);
 
@@ -47,38 +47,47 @@ const sayHello = () => {
 
 // learn("Callback", link);
 
-const request = new Promise(function (resolve, reject) {
-  setTimeout(() => {
-    console.log("Данныйе подготовка");
+// const request = new Promise(function (resolve, reject) {
+//   setTimeout(() => {
+//     console.log("Данныйе подготовка");
 
-    const product = {
-      name: "Phone",
-      price: 5000,
-    };
+//     const product = {
+//       name: "Phone",
+//       price: 5000,
+//     };
 
-    console.log("Данные подготовка отправляем ия на фронтенд");
-    console.log(product);
-    resolve(product);
+//     console.log("Данные подготовка отправляем ия на фронтенд");
+//     console.log(product);
+//     resolve(product);
+//   });
+// }).catch(() => {
+//   console.log("error Duman");
+// });
+
+// request.then((product) => {
+//   console.log("our product!", product);
+//   const request2 = new Promise(function (resolve, reject) {
+//     console.log("Данные перезагрузить с другом сервера");
+//     const error = true;
+//     if (error) {
+//       reject();
+//     }
+//     product.model = "phone 16 pro max";
+//   });
+//   request2
+//     .then((e) => {
+//       console.log(e, "Произашло некоторы ошибка");
+//     })
+//     .catch(() => {
+//       console.log("Произошло ошибка");
+//     });
+// });
+
+const test = (time) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), time);
   });
-}).catch(() => {
-  console.log("error Duman");
-});
+};
 
-request.then((product) => {
-  console.log("our product!", product);
-  const request2 = new Promise(function (resolve, reject) {
-    console.log("Данные перезагрузить с другом сервера");
-    const error = true;
-    if (error) {
-      reject();
-    }
-    product.model = "phone 16 pro max";
-  });
-  request2
-    .then((e) => {
-      console.log(e, "Произашло некоторы ошибка");
-    })
-    .catch(() => {
-      console.log("Произошло ошибка");
-    });
-});
+test(1000).then(() => console.log("1 секунд"));
+test(5000).then(() => console.log("2 секунд"));
