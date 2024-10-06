@@ -22,8 +22,8 @@ person1.name = "Samat";
 // console.log(person1);
 
 //XMLHttpRequest
-const inputUSD = document.querySelector("#usd"),
-  inputKZT = document.querySelector("#kzt");
+// const inputUSD = document.querySelector("#usd"),
+//   inputKZT = document.querySelector("#kzt");
 
 // inputKZT.addEventListener("input", () => {
 //   //   console.log("KZT works!");
@@ -44,11 +44,24 @@ const inputUSD = document.querySelector("#usd"),
 //   });
 // });
 
-inputKZT.addEventListener("input", async () => {
-  let response = await fetch("./data.json");
+// inputKZT.addEventListener("input", async () => {
+//   let response = await fetch("./data.json");
 
-  if (response.ok) {
-    const data = await response.json();
-    inputUSD.value = +inputKZT.value / data.current.usd;
-  }
+//   if (response.ok) {
+//     const data = await response.json();
+//     inputUSD.value = +inputKZT.value / data.current.usd;
+//   }
+// });
+
+const btn = document.querySelector("btnWeather");
+
+inputKZT.addEventListener("input", () => {
+  //   console.log("KZT works!");
+  const request = new XMLHttpRequest();
+  request.open(
+    "GET",
+    "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=${API key}"
+  );
+  request.setRequestHeader("Content-type", "app/json");
+  request.send();
 });
