@@ -2,8 +2,10 @@ import "./App.css";
 
 function Header() {
   return (
-    <div className="App">
-      <p>Here my first React Application!</p>
+    <div className="Header">
+      <p>Its Header</p>
+      <a>Home</a>
+      <a>About</a>
     </div>
   );
 }
