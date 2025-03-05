@@ -7,5 +7,16 @@
   </head>
   <body>
     <script src="script.js" type="module"></script>
+    <div class="modContent"></div>
+    <script>
+      // Сіздің кодыңыз осында қосылады
+      var modContentDiv = document.querySelector(".modContent");
+      modContentDiv.innerHTML =
+        '<div style="padding:4px; margin-top:4px; border:1px solid #eee;"><div class="moddesc">Use one of three ways, select courses  and fill the registration list.</div><div style="margin:6px">Choose course: <select id="idCmbSearchType" style="min-width:180px"><option value=""></option><option value="by_prog">From your program</option><option value="by_search">Search by course code</option><option value="by_ders">From all courses</option></select>&nbsp;<a href="#" id="idBtnShow" class="button" onclick="ShowSearchTypesChanged(); return false;">Show</a></div>         <div style="padding-top:10px" id="divCourseSearchType"></div></div>';
+      var newContent =
+        '<table style="width: 100%;"><tbody> ... </tbody></table>';
+      modContentDiv.insertAdjacentHTML("beforeend", newContent);
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>
