@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function Fcomponent() {
-  return <div>Func component</div>;
+export default function Fcomponent(props) {
+  return (
+    <div>
+      <h1>Hello, {props.name}</h1>
+    </div>
+  );
 }
