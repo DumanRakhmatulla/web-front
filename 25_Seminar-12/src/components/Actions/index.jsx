@@ -1,0 +1,32 @@
+import React from "react";
+
+import "./style.css";
+
+import { ReactComponent as TwitterSVG } from "../../assets/twitter.svg";
+import { ReactComponent as TumblrSVG } from "../../assets/tumblr.svg";
+
+import Button from "../../UI/Button";
+
+export default class Actions extends React.Component {
+  render() {
+    return (
+      <div className="actions">
+        <div className="links">
+          <Button color={"16a085"} style={{ marginRight: "1rem" }}>
+            <TwitterSVG fill={"white"} width={10} height={10} />
+          </Button>
+          <Button color={"16a085"}>
+            <TumblrSVG fill={"white"} width={10} height={10} />
+          </Button>
+        </div>
+        <button></button>
+        <Button
+          color={"16a085"}
+          handleGenerateQuote={this.props.handleGenerateQuote}
+        >
+          New Quote
+        </Button>
+      </div>
+    );
+  }
+}
