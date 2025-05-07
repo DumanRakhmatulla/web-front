@@ -12,16 +12,19 @@ export default class Actions extends React.Component {
     return (
       <div className="actions">
         <div className="links">
-          <Button color={"16a085"} style={{ marginRight: "1rem" }}>
+          <Button
+            color={"#16a085"}
+            style={{ marginRight: "1rem" }}
+            link={"https://x.com/"}
+          >
             <TwitterSVG fill={"white"} width={10} height={10} />
           </Button>
-          <Button color={"16a085"}>
+          <Button color={"#16a085"} link={"https://www.tumblr.com/"}>
             <TumblrSVG fill={"white"} width={10} height={10} />
           </Button>
         </div>
-        <button></button>
         <Button
-          color={"16a085"}
+          color={"#16a085"}
           handleGenerateQuote={this.props.handleGenerateQuote}
         >
           New Quote
