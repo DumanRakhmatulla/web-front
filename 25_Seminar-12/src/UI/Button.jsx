@@ -7,7 +7,7 @@ export default class Button extends React.Component {
     if (this.props.link) {
       window.location.href = this.props.link;
     } else {
-      console.log("This is quote");
+      this.props.generateRandomQuote();
     }
   };
   render() {

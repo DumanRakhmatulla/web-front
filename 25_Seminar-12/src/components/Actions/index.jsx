@@ -25,7 +25,8 @@ export default class Actions extends React.Component {
         </div>
         <Button
           color={"#16a085"}
-          handleGenerateQuote={this.props.handleGenerateQuote}
+          link={""}
+          generateRandomQuote={this.props.generateRandomQuote}
         >
           New Quote
         </Button>

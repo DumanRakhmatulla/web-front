@@ -22,8 +22,24 @@ const colors = [
   "#73A857",
 ];
 
+const generateRandom = () => {
+  const randomQuoteIndex = Math.floor(Math.random() * quotesData.quotes.length);
+  return quotesData.quotes[randomQuoteIndex];
+};
+
+// const randomQuote = Math.floor(Math.random() * quotesData.quotes.length);
+// console.log(randomQuote);
 class App extends React.Component {
+  state = {
+    quote: generateRandom(),
+  };
+
+  generateRandomQuote = () => {
+    this.setState({ quote: generateRandom() });
+  };
   render() {
+    // this.generateRandomQuote();
+    // console.log(this.state.quote);
     return (
       <div
         style={{
@@ -32,9 +48,13 @@ class App extends React.Component {
         className="App"
       >
         <div className="quotes-container">
-          <Quotes />
+          <Quotes
+            author={this.state.quote.author}
+            quote={this.state.quote.quote}
+          />
+
           <hr />
-          <Actions />
+          <Actions generateRandomQuote={this.generateRandomQuote} />
         </div>
       </div>
     );
