@@ -13,18 +13,18 @@ export default class Actions extends React.Component {
       <div className="actions">
         <div className="links">
           <Button
-            color={"#16a085"}
+            color={this.props.color}
             style={{ marginRight: "1rem" }}
             link={"https://x.com/"}
           >
             <TwitterSVG fill={"white"} width={10} height={10} />
           </Button>
-          <Button color={"#16a085"} link={"https://www.tumblr.com/"}>
+          <Button color={this.props.color} link={"https://www.tumblr.com/"}>
             <TumblrSVG fill={"white"} width={10} height={10} />
           </Button>
         </div>
         <Button
-          color={"#16a085"}
+          color={this.props.color}
           link={""}
           generateRandomQuote={this.props.generateRandomQuote}
         >

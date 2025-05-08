@@ -9,12 +9,12 @@ export default class Qoutes extends React.Component {
     return (
       <div className="quotes">
         <div className="quote">
-          <QuotesSVG fill={"#16a085"} width={30} height={30} />
-          <p className="quote-text" style={{ color: "#16a085" }}>
+          <QuotesSVG fill={this.props.color} width={30} height={30} />
+          <p className="quote-text" style={{ color: this.props.color }}>
             {this.props.quote}
           </p>
         </div>
-        <p className="author" style={{ color: "#16a085" }}>
+        <p className="author" style={{ color: this.props.color }}>
           - {this.props.author}
         </p>
       </div>

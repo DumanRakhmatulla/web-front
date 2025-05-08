@@ -24,7 +24,15 @@ const colors = [
 
 const generateRandom = () => {
   const randomQuoteIndex = Math.floor(Math.random() * quotesData.quotes.length);
-  return quotesData.quotes[randomQuoteIndex];
+  const randomColorIndex = Math.floor(Math.random() * colors.length);
+
+  const quote = {
+    author: quotesData.quotes[randomQuoteIndex].author,
+    quote: quotesData.quotes[randomQuoteIndex].quote,
+    color: colors[randomColorIndex],
+  };
+
+  return quote;
 };
 
 // const randomQuote = Math.floor(Math.random() * quotesData.quotes.length);
@@ -37,13 +45,14 @@ class App extends React.Component {
   generateRandomQuote = () => {
     this.setState({ quote: generateRandom() });
   };
+
   render() {
     // this.generateRandomQuote();
     // console.log(this.state.quote);
     return (
       <div
         style={{
-          backgroundColor: "#16a085",
+          backgroundColor: this.props.color,
         }}
         className="App"
       >

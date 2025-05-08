@@ -15,7 +15,7 @@ export default class Button extends React.Component {
     return (
       <button
         style={{
-          backgroundColor: "#16a085",
+          backgroundColor: this.props.color,
           ...style,
         }}
         className="button"
